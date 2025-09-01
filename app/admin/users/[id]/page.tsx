@@ -1,5 +1,5 @@
 import { GetUsersById } from "@/actions/user";
-import UserEditFormPage from "@/components/users/UserEditForm";
+import UserEditForm from "@/components/users/UserEditForm";
 
 interface IParams {
     params: Promise<{ id: string }>
@@ -15,7 +15,7 @@ async function EditUsersPage({ params }: IParams) {
     return (
         <div className="bg-neutral-200 rounded-xl shadow-lg max-w-[600px] mx-auto my-12 p-5">
             <h1 className="font-bold text-xl text-center">update this user </h1>
-           <UserEditFormPage currentUser={user} />
+           <UserEditForm currentUser={user} />
         </div>
 
     )
